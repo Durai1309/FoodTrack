@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\FoodTrack.Web.props" />
+</Project>
