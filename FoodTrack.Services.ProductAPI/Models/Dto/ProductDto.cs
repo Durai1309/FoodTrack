@@ -12,3 +12,4 @@ namespace FoodTrack.Services.ProductAPI.Models.Dto
         public String ImageUrl { get; set; }
     }
 }
+

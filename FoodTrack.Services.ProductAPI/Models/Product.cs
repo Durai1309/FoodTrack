@@ -16,3 +16,4 @@ namespace FoodTrack.Services.ProductAPI.Models
         public String ImageUrl { get; set; }
     }
 }
+
