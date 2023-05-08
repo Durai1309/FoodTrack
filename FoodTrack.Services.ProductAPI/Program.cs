@@ -1,5 +1,6 @@
 using AutoMapper;
 using FoodTrack.Services.ProductAPI.DbContexts;
+using FoodTrack.Services.ProductAPI.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace FoodTrack.Services.ProductAPI
@@ -15,6 +16,7 @@ namespace FoodTrack.Services.ProductAPI
             IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
             builder.Services.AddSingleton(mapper);
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            builder.Services.AddScoped<IProductRepository, ProductRepository>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
