@@ -32,5 +32,19 @@ namespace FoodTrack.Services.ProductAPI.Controllers
         }
 
 
+        [HttpGet]
+        public async Task<object> GetAll()
+        {
+            try
+            {
+                IEnumerable<ProductDto> productDtos = await _productRepository.GetProducts();
+                _responseDto.Result = productDtos;
+            }
+            catch (Exception ex)
+            {
+                _responseDto.Success = false;
+            }
+            return _responseDto;
+        }
     }
 }
