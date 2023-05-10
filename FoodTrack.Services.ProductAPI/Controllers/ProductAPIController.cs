@@ -17,7 +17,7 @@ namespace FoodTrack.Services.ProductAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<object> Get()
+        public async Task<object> GetProducts()
         {
             try
             {
@@ -30,17 +30,63 @@ namespace FoodTrack.Services.ProductAPI.Controllers
             }
             return _responseDto;
         }
-
-
         [HttpGet]
-        public async Task<object> GetAll()
+        [Route("{id}")]
+        public async Task<object> GetProductsById(int id)
         {
             try
             {
-                IEnumerable<ProductDto> productDtos = await _productRepository.GetProducts();
+                ProductDto productDtos = await _productRepository.GetProductsById(id);
                 _responseDto.Result = productDtos;
             }
+            catch (Exception)
+            {
+                _responseDto.Success = false;
+            }
+            return _responseDto;
+        }
+
+
+        [HttpPost]
+        public async Task<object> CreateProduct([FromBody] ProductDto productDto)
+        {
+            try
+            {
+                ProductDto model = await _productRepository.CreateUpdate(productDto);
+                _responseDto.Result = model;
+            }
+            catch (Exception)
+            {
+                _responseDto.Success = false;
+            }
+            return _responseDto;
+        }
+
+
+        [HttpPut]
+        public async Task<object> UpdateProduct([FromBody] ProductDto productDto)
+        {
+            try
+            {
+                ProductDto model = await _productRepository.CreateUpdate(productDto);
+                _responseDto.Result = model;
+            }
             catch (Exception ex)
+            {
+                _responseDto.Success = false;
+            }
+            return _responseDto;
+        }
+
+        [HttpDelete]
+        public async Task<object> DeleteProduct(int id)
+        {
+            try
+            {
+                bool model = await _productRepository.DeleteProduct(id);
+                _responseDto.Result = model;
+            }
+            catch (Exception)
             {
                 _responseDto.Success = false;
             }
