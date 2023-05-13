@@ -71,7 +71,7 @@ namespace FoodTrack.Services.ProductAPI.Controllers
                 ProductDto model = await _productRepository.CreateUpdate(productDto);
                 _responseDto.Result = model;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 _responseDto.Success = false;
             }

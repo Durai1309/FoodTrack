@@ -29,3 +29,5 @@ C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\refint\Food
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\FoodTrack.Web.pdb
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\FoodTrack.Web.genruntimeconfig.cache
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\ref\FoodTrack.Web.dll
+C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\FoodTrack.Web.csproj.CopyComplete
