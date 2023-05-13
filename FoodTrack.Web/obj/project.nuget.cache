@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HQdKDGsLATFCoURgWNx+8HsakdxL3Jkw7KeM35D1URu5CXtGUy7KN07IDvNgH/DbMVsuKS9zMLsu5wDsko1+Nw==",
+  "dgSpecHash": "Xov3u6CElFiAN3FL/X7eAIETMl1mArNHRfpJqbCpLrKvRdxVBgXVS4ZMvztrRCSXDwkseIudO6KipDv0vJjMZA==",
   "success": true,
   "projectFilePath": "C:\\Users\\91967\\source\\repos\\FoodTrack\\FoodTrack.Web\\FoodTrack.Web.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\91967\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
