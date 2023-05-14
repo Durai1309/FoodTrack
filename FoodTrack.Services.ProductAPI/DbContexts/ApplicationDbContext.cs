@@ -11,7 +11,7 @@ namespace FoodTrack.Services.ProductAPI.DbContexts
         }
         public DbSet<Product> Products { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+     /*   protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
@@ -52,6 +52,6 @@ namespace FoodTrack.Services.ProductAPI.DbContexts
                 ImageUrl = "https://res.cloudinary.com/dlicvgh0a/image/upload/v1683825797/cld-sample-4.jpg",
                 CategoryName = "Entree"
             });
-        }
+        }*/
     }
 }
