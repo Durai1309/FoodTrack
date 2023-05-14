@@ -6,6 +6,7 @@ C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\bin\Debug\net6.0\FoodTrack.W
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\bin\Debug\net6.0\FoodTrack.Web.runtimeconfig.json
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\bin\Debug\net6.0\FoodTrack.Web.dll
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\bin\Debug\net6.0\FoodTrack.Web.pdb
+C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\FoodTrack.Web.csproj.AssemblyReference.cache
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\FoodTrack.Web.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\FoodTrack.Web.AssemblyInfoInputs.cache
@@ -24,10 +25,9 @@ C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\staticwebas
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\scopedcss\bundle\FoodTrack.Web.styles.css
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\scopedcss\projectbundle\FoodTrack.Web.bundle.scp.css
+C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\FoodTrack.Web.csproj.CopyComplete
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\FoodTrack.Web.dll
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\refint\FoodTrack.Web.dll
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\FoodTrack.Web.pdb
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\FoodTrack.Web.genruntimeconfig.cache
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\ref\FoodTrack.Web.dll
-C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\bin\Debug\net6.0\Newtonsoft.Json.dll
-C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\obj\Debug\net6.0\FoodTrack.Web.csproj.CopyComplete

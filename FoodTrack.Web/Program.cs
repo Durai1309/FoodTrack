@@ -1,3 +1,6 @@
+using FoodTrack.Web.Services.IServices;
+using FoodTrack.Web.Services;
+
 namespace FoodTrack.Web
 {
     public class Program
@@ -8,6 +11,9 @@ namespace FoodTrack.Web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddHttpClient<IProductServices,ProductService>();
+            StaticData.ProductAPIBase = builder.Configuration["ServiceUrls:ProductAPI"];
+            builder.Services.AddScoped<IProductServices,ProductService>();
 
             var app = builder.Build();
 

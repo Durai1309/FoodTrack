@@ -21,36 +21,39 @@ namespace FoodTrack.Web.Services
             try
             {
                 var client = httpClient.CreateClient("FoodTrack");
-                HttpRequestMessage Message = new HttpRequestMessage();
-                Message.Headers.Add("Accept", "application/json");
-                Message.RequestUri = new Uri(apiRequestcs.ApiUrl);
+                HttpRequestMessage message = new HttpRequestMessage();
+                message.Headers.Add("Accept", "application/json");
+                message.RequestUri = new Uri(apiRequestcs.ApiUrl);
                 client.DefaultRequestHeaders.Clear();
                 if (apiRequestcs.Data != null)
                 {
-                    Message.Content = new StringContent(JsonConvert.SerializeObject(apiRequestcs.Data), Encoding.UTF8, "application/json");
+                    message.Content = new StringContent(JsonConvert.SerializeObject(apiRequestcs.Data),
+                        Encoding.UTF8, "application/json");
                 }
+            
                 ////get Response from Client
                 HttpResponseMessage apiResponse = null;
                 ///Type of Message
                 switch (apiRequestcs.ApiType)
                 {
                     case StaticData.ApiType.POST:
-                        Message.Method = HttpMethod.Post;
+                        message.Method = HttpMethod.Post;
                         break;
                     case StaticData.ApiType.PUT:
-                        Message.Method = HttpMethod.Put;
+                        message.Method = HttpMethod.Put;
                         break;
                     case StaticData.ApiType.DELETE:
-                        Message.Method = HttpMethod.Delete;
+                        message.Method = HttpMethod.Delete;
                         break;
-                    case StaticData.ApiType.GET:
-                        Message.Method = HttpMethod.Get;
+                    default:
+                        message.Method = HttpMethod.Get;
                         break;
                 }
-                apiResponse = await client.SendAsync(Message);
+                apiResponse = await client.SendAsync(message);
                 var apiContent = await apiResponse.Content.ReadAsStringAsync();
                 var apiResponseDto = JsonConvert.DeserializeObject<T>(apiContent);
                 return apiResponseDto;
+        
             }
             catch (Exception)
             {
@@ -67,7 +70,7 @@ namespace FoodTrack.Web.Services
         }
         public void Dispose()
         {
-            throw new NotImplementedException();
+            GC.SuppressFinalize(true);
         }
 
     }

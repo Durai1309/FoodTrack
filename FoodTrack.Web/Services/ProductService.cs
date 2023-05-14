@@ -1,5 +1,8 @@
 ﻿using FoodTrack.Web.Models;
 using FoodTrack.Web.Services.IServices;
+using Newtonsoft.Json.Linq;
+using static FoodTrack.Web.StaticData;
+using System;
 
 namespace FoodTrack.Web.Services
 {
@@ -40,8 +43,8 @@ namespace FoodTrack.Web.Services
                 ApiType = StaticData.ApiType.GET,
                 ApiUrl = StaticData.ProductAPIBase + "/api/products",
                 AccessToken = ""
-
-            });
+            
+        });
         }
         public async Task<T> GetProductByIdAsync<T>(int id)
         {

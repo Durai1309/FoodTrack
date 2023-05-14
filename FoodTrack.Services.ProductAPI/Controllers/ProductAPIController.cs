@@ -24,7 +24,7 @@ namespace FoodTrack.Services.ProductAPI.Controllers
                 IEnumerable<ProductDto> productDtos = await _productRepository.GetProducts();
                 _responseDto.Result = productDtos;
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 _responseDto.Success = false;
             }
