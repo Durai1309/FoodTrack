@@ -26,14 +26,20 @@ namespace FoodTrack.Web.Controllers
 
 			return View(list);
 		}
-
-		/*public async Task<IActionResult> ProductCreate()
+        /// <summary>
+        /// ProductCreate
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IActionResult> ProductCreate()
 		{
-			
 			return View();
-		}*/
-
-		[HttpPost]
+		}
+        /// <summary>
+        /// ProductCreate
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> ProductCreate(ProductDto model)
 		{
