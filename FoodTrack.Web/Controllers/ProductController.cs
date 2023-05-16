@@ -23,22 +23,14 @@ namespace FoodTrack.Web.Controllers
 			{
 				list = JsonConvert.DeserializeObject<List<ProductDto>>(Convert.ToString(response.Result));
 			}
-
 			return View(list);
 		}
-        /// <summary>
-        /// ProductCreate
-        /// </summary>
-        /// <returns></returns>
+     
         public async Task<IActionResult> ProductCreate()
 		{
 			return View();
 		}
-        /// <summary>
-        /// ProductCreate
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
+      
         [HttpPost]
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> ProductCreate(ProductDto model)
