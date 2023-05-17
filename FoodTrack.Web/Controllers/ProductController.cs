@@ -15,7 +15,11 @@ namespace FoodTrack.Web.Controllers
 		{
 			_services = productServices;
 		}
-		public async Task<IActionResult> ProductIndex()
+        /// <summary>
+        /// ProductIndex
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IActionResult> ProductIndex()
 		{
 			List<ProductDto> list = new();
 			var response = await _services.GetAllProductAsync<ResponseDto>();
@@ -26,10 +30,10 @@ namespace FoodTrack.Web.Controllers
 			return View(list);
 		}
      
-        public async Task<IActionResult> ProductCreate()
+        /*public async Task<IActionResult> ProductCreate()
 		{
 			return View();
-		}
+		}*/
       
         [HttpPost]
 		[ValidateAntiForgeryToken]
