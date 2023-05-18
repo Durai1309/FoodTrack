@@ -29,11 +29,14 @@ namespace FoodTrack.Web.Controllers
 			}
 			return View(list);
 		}
-     
-        /*public async Task<IActionResult> ProductCreate()
+        /// <summary>
+        /// ProductCreate
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IActionResult> ProductCreate()
 		{
 			return View();
-		}*/
+		}
       
         [HttpPost]
 		[ValidateAntiForgeryToken]
