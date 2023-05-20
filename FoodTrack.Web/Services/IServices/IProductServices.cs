@@ -2,7 +2,7 @@
 
 namespace FoodTrack.Web.Services.IServices
 {
-    public interface IProductServices : IBaseSevices
+    public interface IProductServices 
     {
         /// <summary>
         /// GetAllProductAsync
