@@ -31,7 +31,7 @@ namespace FoodTrack.Web.Services
             return await this.SentAsync<T>(new ApiRequestcs()
             {
                 ApiType = StaticData.ApiType.DELETE,
-                ApiUrl = StaticData.ProductAPIBase + "/api/products" + id,
+                ApiUrl = StaticData.ProductAPIBase + "/api/products/" + id,
                 AccessToken = ""
 
             });
@@ -51,7 +51,7 @@ namespace FoodTrack.Web.Services
             return await this.SentAsync<T>(new ApiRequestcs()
             {
                 ApiType = StaticData.ApiType.GET,
-                ApiUrl = StaticData.ProductAPIBase + "/api/products" + id,
+                ApiUrl = StaticData.ProductAPIBase + "/api/products/" + id,
                 AccessToken = ""
 
             });
