@@ -1,5 +1,6 @@
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\bin\Debug\net6.0\appsettings.json
+C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\bin\Debug\net6.0\Views\Properties\launchSettings.json
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\bin\Debug\net6.0\FoodTrack.Web.staticwebassets.runtime.json
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\bin\Debug\net6.0\FoodTrack.Web.exe
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Web\bin\Debug\net6.0\FoodTrack.Web.deps.json

@@ -7,52 +7,44 @@ using Newtonsoft.Json;
 
 namespace FoodTrack.Web.Controllers
 {
-	public class ProductController : Controller
-	{
-		private readonly IProductServices _services;
+    public class ProductController : Controller
+    {
+        private readonly IProductServices _services;
 
-		public ProductController(IProductServices productServices)
-		{
-			_services = productServices;
-		}
-        /// <summary>
-        /// ProductIndex
-        /// </summary>
-        /// <returns></returns>
+        public ProductController(IProductServices productServices)
+        {
+            _services = productServices;
+        }
         public async Task<IActionResult> ProductIndex()
-		{
-			List<ProductDto> list = new();
-			var response = await _services.GetAllProductAsync<ResponseDto>();
-			if (response != null && response.Success)
-			{
-				list = JsonConvert.DeserializeObject<List<ProductDto>>(Convert.ToString(response.Result));
-			}
-			return View(list);
-		}
-        /// <summary>
-        /// ProductCreate
-        /// </summary>
-        /// <returns></returns>
+        {
+            List<ProductDto> list = new();
+            var response = await _services.GetAllProductAsync<ResponseDto>();
+            if (response != null && response.Success)
+            {
+                list = JsonConvert.DeserializeObject<List<ProductDto>>(Convert.ToString(response.Result));
+            }
+            return View(list);
+        }
         public async Task<IActionResult> ProductCreate()
-		{
-			return View();
-		}
-      
+        {
+            return View();
+        }
+
         [HttpPost]
-		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> ProductCreate(ProductDto model)
-		{
-			if (ModelState.IsValid)
-			{
-				var response = await _services.CreateProductTAsync<ResponseDto>(model);
-				if (response != null && response.Success)
-				{
-					return RedirectToAction(nameof(ProductIndex));
-				}
-			}
-			return View(model);
-		}
-	}
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ProductCreate(ProductDto model)
+        {
+            if (ModelState.IsValid)
+            {
+                var response = await _services.CreateProductTAsync<ResponseDto>(model);
+                if (response != null && response.Success)
+                {
+                    return RedirectToAction(nameof(ProductIndex));
+                }
+            }
+            return View(model);
+        }
+    }
 
 }
 
