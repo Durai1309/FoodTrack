@@ -7,18 +7,27 @@ namespace FoodTrack.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+		/// <summary>
+		/// HomeController
+		/// </summary>
+		/// <param name="logger"></param>
+		public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
-
-        public IActionResult Index()
+		/// <summary>
+		/// Index
+		/// </summary>
+		/// <returns></returns>
+		public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult Privacy()
+		/// <summary>
+		/// Privacy
+		/// </summary>
+		/// <returns></returns>
+		public IActionResult Privacy()
         {
             return View();
         }
