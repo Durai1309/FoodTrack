@@ -26,7 +26,7 @@ namespace FoodTrack.Services.Identity
 			new ApiScope(name:"delete",displayName:"delete Your data"),
 		};
 
-		public static IEnumerable<Client> clients = new List<Client>
+		public static IEnumerable<Client> Clients = new List<Client>
 		{
 			new Client
 			{
