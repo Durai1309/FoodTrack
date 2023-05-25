@@ -11,8 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{37
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodTrack.Services.ProductAPI", "FoodTrack.Services.ProductAPI\FoodTrack.Services.ProductAPI.csproj", "{E35019DE-220D-4301-B30B-5C317075ECC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodTrack.Services.Identity", "FoodTrack.Services.Identity\FoodTrack.Services.Identity.csproj", "{3AA5CDF0-2A55-4EBE-9337-2CCD2A8BDB86}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,10 +25,6 @@ Global
 		{E35019DE-220D-4301-B30B-5C317075ECC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E35019DE-220D-4301-B30B-5C317075ECC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E35019DE-220D-4301-B30B-5C317075ECC1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3AA5CDF0-2A55-4EBE-9337-2CCD2A8BDB86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3AA5CDF0-2A55-4EBE-9337-2CCD2A8BDB86}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3AA5CDF0-2A55-4EBE-9337-2CCD2A8BDB86}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3AA5CDF0-2A55-4EBE-9337-2CCD2A8BDB86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,7 +32,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{96E21BD0-D9B3-421B-A66F-4DF39BFB656B} = {F3E1B1FD-6624-4749-AFBB-9931ACD1E461}
 		{E35019DE-220D-4301-B30B-5C317075ECC1} = {37236398-8A25-4EAE-97C9-0C81986C544C}
-		{3AA5CDF0-2A55-4EBE-9337-2CCD2A8BDB86} = {37236398-8A25-4EAE-97C9-0C81986C544C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22659D28-710D-4D9B-B6AC-000BBA918F88}
