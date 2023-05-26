@@ -14,8 +14,11 @@ namespace FoodTrack.Web.Controllers
     public class ProductController : Controller
     {
         private readonly IProductServices _services;
-
-        public ProductController(IProductServices productServices)
+		/// <summary>
+		/// ProductController
+		/// </summary>
+		/// <param name="productServices"></param>
+		public ProductController(IProductServices productServices)
         {
             _services = productServices;
         }
