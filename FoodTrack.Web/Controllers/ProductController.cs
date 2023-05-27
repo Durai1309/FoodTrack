@@ -36,8 +36,12 @@ namespace FoodTrack.Web.Controllers
         {
             return View();
         }
-
-        [HttpPost]
+		/// <summary>
+		/// ProductCreate
+		/// </summary>
+		/// <param name="model"></param>
+		/// <returns></returns>
+		[HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ProductCreate(ProductDto model)
         {
@@ -51,8 +55,12 @@ namespace FoodTrack.Web.Controllers
             }
             return View(model);
         }
-
-        public async Task<IActionResult> ProductEdit(int ProductID)
+		/// <summary>
+		/// ProductEdit
+		/// </summary>
+		/// <param name="ProductID"></param>
+		/// <returns></returns>
+		public async Task<IActionResult> ProductEdit(int ProductID)
         {
             var response = await _services.GetProductByIdAsync<ResponseDto>(ProductID);
             if (response != null && response.Success)
