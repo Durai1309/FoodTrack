@@ -73,8 +73,12 @@ namespace FoodTrack.Web.Controllers
             }
             return View(model);
         }
-
-        public async Task<IActionResult> ProductDelete(int productId)
+		/// <summary>
+		/// ProductDelete
+		/// </summary>
+		/// <param name="productId"></param>
+		/// <returns></returns>
+		public async Task<IActionResult> ProductDelete(int productId)
         {
             var response = await _services.GetProductByIdAsync<ResponseDto>(productId);
             if (response != null && response.Success)
