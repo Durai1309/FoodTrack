@@ -31,8 +31,12 @@ namespace FoodTrack.Web.Controllers
         {
             return View();
         }
-
+        /// <summary>
+        /// Error
+        /// </summary>
+        /// <returns></returns>
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+       
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
