@@ -102,6 +102,12 @@ namespace FoodTrack.Web.Controllers
 		{
 			return null;
 		}
+
+		 public Task<IActionResult> orderbyasc()
+		{
+			return null;
+		}
+
 	}
 
 }
