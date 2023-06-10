@@ -103,7 +103,7 @@ namespace FoodTrack.Web.Controllers
 			return null;
 		}
 
-		 public Task<IActionResult> orderbyasc()
+		 public Task<IActionResult> Orderbyasc()
 		{
 			return null;
 		}
