@@ -111,11 +111,6 @@ namespace FoodTrack.Web.Controllers
 		{
 			return null;
 		}
-		public Task<IActionResult> Filter(string search)
-		{
-			return null;
-		}
-
 	}
 
 }
