@@ -109,7 +109,15 @@ namespace FoodTrack.Web.Controllers
 		}
 		public Task<IActionResult> Search(string search)
 		{
-			return null;
+			try
+			{
+				return null;
+
+			}
+			catch (Exception ex)
+			{
+				return null;
+			}
 		}
 	}
 
