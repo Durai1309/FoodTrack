@@ -98,15 +98,6 @@ namespace FoodTrack.Web.Controllers
 			}
 			return View(model);
 		}
-		public Task<IActionResult> orderby()
-		{
-			return null;
-		}
-
-		public Task<IActionResult> Orderbyasc()
-		{
-			return null;
-		}
 		public Task<IActionResult> Search(string search)
 		{
 			try
