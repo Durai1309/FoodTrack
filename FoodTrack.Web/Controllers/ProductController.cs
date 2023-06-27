@@ -98,20 +98,7 @@ namespace FoodTrack.Web.Controllers
 			}
 			return View(model);
 		}
-		public Task<IActionResult> Search(string search)
-		{
-			try
-			{
-				return null;
-
-			}
-			catch (Exception ex)
-			{
-				return null;
-			}
-		}
 	}
-
 }
 
 
