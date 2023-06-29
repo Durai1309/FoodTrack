@@ -4,6 +4,7 @@ using FoodTrack.Web.Services.IServices;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Data;
@@ -98,6 +99,12 @@ namespace FoodTrack.Web.Controllers
 			}
 			return View(model);
 		}
+
+		public IActionResult Privacy()
+		{
+			return View();
+		}
+
 	}
 }
 
