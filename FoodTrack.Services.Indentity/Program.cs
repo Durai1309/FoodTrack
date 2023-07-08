@@ -1,24 +1,25 @@
+using FoodTrack.Services.Indentity;
 using FoodTrack.Services.Indentity.DbContexts;
 using FoodTrack.Services.Indentity.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("FoodTrack")));
-services.AddIdentity<ApplicationUser, IdentityRole>()
-			   .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("FoodTrack")));
+ builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
-var builder = services.AddIdentityServer(options =>
+ builder.Services.AddIdentityServer(options =>
 {
 	options.Events.RaiseErrorEvents = true;
 	options.Events.RaiseInformationEvents = true;
 	options.Events.RaiseFailureEvents = true;
 	options.Events.RaiseSuccessEvents = true;
 	options.EmitStaticAudienceClaim = true;
-}).AddInMemoryIdentityResources(SD.IdentityResources)
-.AddInMemoryApiScopes(SD.ApiScopes)
-.AddInMemoryClients(SD.Clients)
-.AddAspNetIdentity<ApplicationUser>();
+}).AddInMemoryIdentityResources(StaticData.IdentityResources)
+.AddInMemoryApiScopes(StaticData.ApiScopes)
+.AddInMemoryClients(StaticData.Clients)
+.AddAspNetIdentity<ApplicationUser>().AddDeveloperSigningCredential();
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -37,7 +38,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseIdentityServer();
 app.UseAuthorization();
 
 app.MapControllerRoute(
