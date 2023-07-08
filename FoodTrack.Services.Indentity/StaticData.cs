@@ -1,4 +1,5 @@
-﻿using Duende.IdentityServer.Models;
+﻿using Duende.IdentityServer;
+using Duende.IdentityServer.Models;
 
 namespace FoodTrack.Services.Indentity
 {
@@ -21,8 +22,38 @@ namespace FoodTrack.Services.Indentity
 				  new ApiScope("FoodTrack", "FoodTrack Server"),
 				  new ApiScope(name : "read", displayName:"Read your data."),
 				  new ApiScope(name : "write",displayName : "Write your data."),
-				  new ApiScope(name:"delete" ,displayName:"Delete your data")
+				  new ApiScope(name: "delete" ,displayName:"Delete your data")
+			};
+		public static IEnumerable<Client> Clients =>
+			new List<Client>
+			{
+				new Client
+				{
+					ClientId="client",
+					ClientSecrets= { new Secret("secret".Sha256())},
+					AllowedGrantTypes = GrantTypes.ClientCredentials,
+					AllowedScopes={ "read", "write","profile"}
+				},
+				new Client
+				{
+					ClientId="FoodTrack",
+					ClientSecrets= { new Secret("secret".Sha256())},
+					AllowedGrantTypes = GrantTypes.Code,
+					RedirectUris={ "https://localhost:44379/signin-oidc" },
+					PostLogoutRedirectUris={"https://localhost:44379/signout-callback-oidc" },
+					AllowedScopes=new List<string>
+					{
+						IdentityServerConstants.StandardScopes.OpenId,
+						IdentityServerConstants.StandardScopes.Profile,
+						IdentityServerConstants.StandardScopes.Email,
+						"FoodTrack"
+					}
+				},
 			};
 
 	}
 }
+
+
+
+
