@@ -18,7 +18,16 @@ namespace FoodTrack.Services.Indentity.Initial
 		}
 		public void Initial()
 		{
-			throw new NotImplementedException();
+			if(_roleManager.FindByNameAsync(StaticData.Admin).Result == null)
+			{
+				_roleManager.CreateAsync(new IdentityRole(StaticData.Admin)).GetAwaiter().GetResult();
+				_roleManager.CreateAsync(new IdentityRole(StaticData.Customer)).GetAwaiter().GetResult();
+
+			}
+			else
+			{
+				return;
+			}
 		}
 	}
 }
