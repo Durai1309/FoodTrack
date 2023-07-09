@@ -42,14 +42,6 @@ namespace FoodTrack.Web.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-		[Authorize]
-		public IActionResult Login()
-		{
-			return RedirectToAction(nameof(Index));
-		}
-		public IActionResult Logout()
-		{
-			return SignOut("Cookies", "oidc");
-		}
+	
 	}
 }

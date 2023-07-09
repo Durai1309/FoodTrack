@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\FoodTrack.Services.Indentity.props" />
-</Project>

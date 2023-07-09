@@ -16,7 +16,6 @@ namespace FoodTrack.Services.ProductAPI.Controllers
 			_productRepository = productRepository;
 			this._responseDto = new ResponseDto();
 		}
-		[Authorize]
 		[HttpGet]
 		public async Task<object> GetProducts()
 		{
@@ -31,7 +30,6 @@ namespace FoodTrack.Services.ProductAPI.Controllers
 			}
 			return _responseDto;
 		}
-		[Authorize]
 		[HttpGet]
 		[Route("{id}")]
 		public async Task<object> GetProductsById(int id)
@@ -48,7 +46,6 @@ namespace FoodTrack.Services.ProductAPI.Controllers
 			return _responseDto;
 		}
 
-		[Authorize]
 		[HttpPost]
 		public async Task<object> CreateProduct([FromBody] ProductDto productDto)
 		{
@@ -63,7 +60,6 @@ namespace FoodTrack.Services.ProductAPI.Controllers
 			}
 			return _responseDto;
 		}
-		[Authorize]
 		[HttpPut]
 		public async Task<object> UpdateProduct([FromBody] ProductDto productDto)
 		{
@@ -80,7 +76,6 @@ namespace FoodTrack.Services.ProductAPI.Controllers
 		}
 
 		[HttpDelete]
-		[Authorize(Roles = "Admin")]
 		[Route("{id}")]
 		public async Task<object> DeleteProduct(int id)
 		{
