@@ -71,3 +71,4 @@ C:\Users\91967\source\repos\FoodTrack\FoodTrack.Services.Indentity\obj\Debug\net
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Services.Indentity\obj\Debug\net6.0\FoodTrack.Services.Indentity.pdb
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Services.Indentity\obj\Debug\net6.0\FoodTrack.Services.Indentity.genruntimeconfig.cache
 C:\Users\91967\source\repos\FoodTrack\FoodTrack.Services.Indentity\obj\Debug\net6.0\ref\FoodTrack.Services.Indentity.dll
+C:\Users\91967\source\repos\FoodTrack\FoodTrack.Services.Indentity\bin\Debug\net6.0\keys\is-signing-key-3F5680EBA5FAF4032E03748E06C78C64.json
