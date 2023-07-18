@@ -104,8 +104,11 @@ namespace FoodTrack.Web.Controllers
 		{
 			return View();
 		}
-
-	}
+        public IActionResult Serach()
+        {
+            return View();
+        }
+    }
 }
 
 
