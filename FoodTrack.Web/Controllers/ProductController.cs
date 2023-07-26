@@ -100,14 +100,7 @@ namespace FoodTrack.Web.Controllers
 			return View(model);
 		}
 
-		public IActionResult Privacy()
-		{
-			return View();
-		}
-        public IActionResult Serach()
-        {
-            return View();
-        }
+       
     }
 }
 
